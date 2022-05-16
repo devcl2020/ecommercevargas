@@ -13,7 +13,6 @@ function NavBar() {
     return (
         <>
             <Nav>
-
                 <Bars />
                 <NavMenu>
                     <NavLink to='/productos' activeStyle>

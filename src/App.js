@@ -9,6 +9,7 @@ import Contacto from './pages/contacto';
 import Salir from './pages/Salir';
 import NavBar from "./components/NavBar/NavBar";
 import Carrito from "./components/CartWidget";
+import ItemDetail from "./components/ItemDetail";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route path='/servicios' element={<Servicios/>} />
           <Route path='/contacto' element={<Contacto/>} />
           <Route path='/sign-up' element={<Salir/>} />
-            <Route path='/carrito' element={<Carrito/>} />
+          <Route path='/carrito' element={<Carrito/>} />
+          <Route path='/detail/:id' element={<ItemDetail/>} />
         </Routes>
       </Router>
   );

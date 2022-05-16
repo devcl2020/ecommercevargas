@@ -4,16 +4,16 @@ import Item from "./Item";
 import ItemList from "./ItemList";
 
 export default function ItemListContainer({greeting}){
-let producto
+let productos
     const task = new Promise((resolve, reject)=>{
-         producto = [{id:123, name:"producto1", descripcion: "descrProd", stock: 5},
+         productos = [{id:123, name:"producto1", descripcion: "descrProd", stock: 5},
              {id:234, name:"producto2", descripcion: "descrProd2", stock: 10}]
         setTimeout(()=>{
-            resolve(producto)
+            resolve(productos)
         }, 2000)
 
         task.then((res)=>{
-            console.log({producto})
+            console.log({productos})
         })
 
     })
@@ -21,7 +21,7 @@ let producto
 
     return (
         <>
-            <ItemList items={producto}></ItemList>
+            <ItemList items={productos}></ItemList>
 
         </>
     );

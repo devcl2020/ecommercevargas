@@ -3,10 +3,10 @@ import ItemCount from "./ItemCount";
 import Item from "./Item";
 import * as PropTypes from "prop-types";
 import styled from 'styled-components';
+import {Link} from "react-router-dom";
 
 
-
-export default function ItemList({items}){
+export default function ItemList({items}) {
 
     const Styles = styled.div`
  table {
@@ -46,21 +46,25 @@ export default function ItemList({items}){
             <h1>PRODUCTOS</h1>
             <Styles>
                 <table style={{
-                //display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '9vh'
-            }}>
-                <tr>
-                    <th>ID</th>
-                    <th>NOMBRE</th>
-                    <th>DESCRIPCION</th>
-                    <th>STOCK</th>
-                </tr>
-                {items.map((value)=><Item item = {value}></Item>)}
+                    //display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '9vh'
+                }}>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOMBRE</th>
+                        <th>DESCRIPCION</th>
+                        <th>STOCK</th>
+                    </tr>
+                    {items.map((value) =>
+                        <Link to={`/detail/${value.id}`}>
+                            <Item item={value}></Item>
+                        </Link>
+                    )}
 
-            </table>
-                </Styles>
+                </table>
+            </Styles>
 
         </div>
     );

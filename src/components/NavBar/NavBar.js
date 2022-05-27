@@ -7,6 +7,7 @@ import {
     NavMenu
 } from './NavbarElements';
 import cartIcon from "../../images/shopping-cart-icon.png";
+import logo from "../../images/logo.svg";
 
 
 function NavBar() {
@@ -14,15 +15,18 @@ function NavBar() {
         <>
             <Nav>
                 <Bars />
+                <NavLink to='/' activeStyle>
+                    <img src={logo}  alt='logo' height={50}/>
+                </NavLink>
                 <NavMenu>
-                    <NavLink to='/productos' activeStyle>
-                        Productos
+                    <NavLink to='/category/poleras' activeStyle>
+                        Poleras
                     </NavLink>
-                    <NavLink to='/servicios' activeStyle>
-                        Servicios
+                    <NavLink to='/category/pantalones' activeStyle>
+                        Pantalones
                     </NavLink>
-                    <NavLink to='/contacto' activeStyle>
-                        Contacto
+                    <NavLink to='/category/corbatas' activeStyle>
+                        Corbatas
                     </NavLink>
                     <NavLink to='/salir' activeStyle>
                         Salir

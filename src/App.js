@@ -10,19 +10,20 @@ import Salir from './pages/Salir';
 import NavBar from "./components/NavBar/NavBar";
 import Carrito from "./components/CartWidget";
 import ItemDetail from "./components/ItemDetail";
+import ItemDetailContainer from "./components/ItemDetailContainer";
+import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
   return (
       <Router>
           <NavBar />
+
         <Routes>
-          <Route path='/' exact component={Home} />
-          <Route path='/productos' element={<Productos/>} />
-          <Route path='/servicios' element={<Servicios/>} />
-          <Route path='/contacto' element={<Contacto/>} />
+          <Route path='/'          element={<ItemListContainer/>} />
+          <Route path='/category/:category' element={<ItemListContainer/>} />
           <Route path='/sign-up' element={<Salir/>} />
-          <Route path='/carrito' element={<Carrito/>} />
-          <Route path='/detail/:id' element={<ItemDetail/>} />
+          {/*<Route path='/carrito' element={<Carrito/>} />*/}
+          <Route path='/detail/:id' element={<ItemDetailContainer/>} />
         </Routes>
       </Router>
   );

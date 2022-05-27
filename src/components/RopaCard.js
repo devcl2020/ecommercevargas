@@ -11,14 +11,14 @@ const RopaCard = ({ data }) => {
                 component='img'
                 height='440'
                 image={data.img}
-                alt='green iguana'
+                alt='ropa IMG'
             />
             <CardContent>
                 <Typography gutterBottom variant='h5' component='div'>
-                    Name: {data.descripcion}
+                    Name: {data.name}
                 </Typography>
                 <Typography variant='body2' color='text.secondary'>
-                    Status: {data.precio}
+                    Precio: {data.precio}
                 </Typography>
 
             </CardContent>
